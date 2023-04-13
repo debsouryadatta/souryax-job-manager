@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     const token = localStorage.getItem('token')
     // console.log(token);
-    axios.get('http://localhost:5000/api/v1/jobs/', {
+    axios.get('https://souryax-job-manager-dse2.vercel.app/api/v1/jobs/', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -31,7 +31,7 @@ const Home = () => {
   const createJob = async () => {
     const token = localStorage.getItem('token')
     try {
-      const { data } = await axios.post('http://localhost:5000/api/v1/jobs/', {
+      const { data } = await axios.post('https://souryax-job-manager-dse2.vercel.app/api/v1/jobs/', {
         position: position,
         company: company,
         status: status
@@ -53,7 +53,7 @@ const Home = () => {
   const deleteJob = async (id)=>{
     const token = localStorage.getItem('token')
     try {
-      const { data } = await axios.delete(`http://localhost:5000/api/v1/jobs/${id}`,{
+      const { data } = await axios.delete(`https://souryax-job-manager-dse2.vercel.app/api/v1/jobs/${id}`,{
         headers: {
           Authorization: `Bearer ${token}`,
         },

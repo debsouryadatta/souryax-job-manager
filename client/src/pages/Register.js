@@ -14,7 +14,7 @@ const Register = () => {
         // console.log(name);
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/api/v1/auth/register', {
+            const { data } = await axios.post('https://souryax-job-manager-dse2.vercel.app/api/v1/auth/register', {
                 name: name,
                 email: email,
                 password: password

@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e)=>{
       e.preventDefault();
       try {
-          const { data } = await axios.post('http://localhost:5000/api/v1/auth/login', {
+          const { data } = await axios.post('https://souryax-job-manager-dse2.vercel.app/api/v1/auth/login', {
               email: email,
               password: password
           })
