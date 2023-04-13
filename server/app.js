@@ -35,7 +35,7 @@ app.use(xss())
 
 
 // routes
-app.use('/',(req,res)=>[
+app.get('/',(req,res)=>[
   res.send('jobs api')
 ])
 app.use('/api/v1/auth', authRouter)
